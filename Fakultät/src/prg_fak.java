@@ -14,6 +14,6 @@ public class prg_fak {
 	
 	public static void main(String []args)
 	{
-		System.out.println(Fakultät(10));
+		System.out.println(Fakultät(7));
 	}	
 }
