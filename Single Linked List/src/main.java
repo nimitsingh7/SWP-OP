@@ -8,7 +8,7 @@ public class main {
 			ll.add(i);
 		}
 		
-		ll.remove(3);
+		ll.remove(0);
 		
 		for(int i = 0; i < ll.size(); i++)
 		{

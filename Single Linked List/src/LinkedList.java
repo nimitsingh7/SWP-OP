@@ -53,14 +53,21 @@ public class LinkedList {
 	}
 	
 	public void remove(int index)
-	{
-		Node tmp = head;
-		
-		for(int i = 0; i < index; i++)
+	{	
+		if(index == 0)
 		{
-			tmp = tmp.getnext();
+			head = head.getnext();
+			head.setnext(head.getnext());
 		}
-		tmp.setnext(tmp.getnext().getnext());
+		else
+		{
+			Node tmp = head;
+			for(int i = 0; i < index; i++)
+			{
+				tmp = tmp.getnext();
+			}
+			tmp.setnext(tmp.getnext().getnext());
+		}
 	}
 	
 	public int getValueFor(int index)
