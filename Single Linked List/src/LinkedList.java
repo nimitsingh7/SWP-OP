@@ -39,6 +39,30 @@ public class LinkedList {
 		return -1;
 	}
 	
+	public int size()
+	{
+		Node tmp = head;
+		int i = 0;
+		
+		while(tmp != null)
+		{
+			tmp = tmp.getnext();
+			i++;
+		}
+		return i;
+	}
+	
+	public void remove(int index)
+	{
+		Node tmp = head;
+		
+		for(int i = 0; i < index; i++)
+		{
+			tmp = tmp.getnext();
+		}
+		tmp.setnext(tmp.getnext().getnext());
+	}
+	
 	public int getValueFor(int index)
 	{
 		Node tmp = head;

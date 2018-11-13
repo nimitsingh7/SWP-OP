@@ -8,7 +8,9 @@ public class main {
 			ll.add(i);
 		}
 		
-		for(int i = 0; i < 10; i++)
+		ll.remove(3);
+		
+		for(int i = 0; i < ll.size(); i++)
 		{
 			System.out.println(ll.getValueFor(i));
 		}
