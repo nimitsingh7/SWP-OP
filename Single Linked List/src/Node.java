@@ -1,17 +1,17 @@
-public class Node {
-	private int value;
+public class Node<T>{
+	private T value;
 	private Node next = null;
 	
-	public Node(int value)
+	public Node(T value)
 	{
 		this.value = value;
 	}
 	
-	public int getvalue()
+	public T getvalue()
 	{
 		return value;
 	}
-	public void setvalue(int value)
+	public void setvalue(T value)
 	{
 		this.value = value;
 	}

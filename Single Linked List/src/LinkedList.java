@@ -1,5 +1,5 @@
 
-public class LinkedList {
+public class LinkedList<T>{
 	private Node head = null;
 	
 	public void add(int value)
@@ -31,7 +31,7 @@ public class LinkedList {
 		{
 			if(i == index)
 			{
-				return tmp.getvalue();
+				return (int) tmp.getvalue();
 			}
 			tmp = tmp.getnext();
 			i++;
@@ -70,9 +70,9 @@ public class LinkedList {
 		}
 	}
 	
-	public int getValueFor(int index)
+	public T getValueFor(int index)
 	{
-		Node tmp = head;
+		Node<T> tmp = head;
 		for(int i = 0; i < index; i++)
 		{
 			if(tmp.getnext() == null)
