@@ -34,7 +34,8 @@ public class BinaryTree {
 	        return false;
 	    } 
 	    if (value == current.value) {
-	        return true;
+	        System.out.printf("Zahl: %d", current.value);
+	    	return true;
 	    } 
 	    return value < current.value
 	      ? containsNodeRecursive(current.left, value)

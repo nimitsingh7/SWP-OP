@@ -7,5 +7,7 @@ public class main {
 		bt.add(3);
 		bt.add(1);
 		bt.add(7);
+		
+		bt.containsNode(6);
 	}
 }
