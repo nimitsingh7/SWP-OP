@@ -1,0 +1,178 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+
+header{
+	height: 100px;
+	background-color: #FFCE1D;
+	border-radius: 10px;
+	font-family: Verdana;
+	font-style: italic;
+	color: #FFFFFF;
+	text-shadow: #000000 1px 1px 4px;
+}
+
+header h1{
+	padding-left: 50px;
+	padding-top: 25px;
+	font-size: 30pt;
+}
+	
+header h2{
+    font-family: Verdana;
+	font-style: italic;
+	color: #FFFFFF;
+	font-size: 16pt;
+	padding-left: 480px;
+	text-shadow: #000000 1px 1px 4px;
+	padding-top:
+}
+	
+body{
+	width: 800px;
+	background-color: #202020;
+	margin: 25px auto;
+}
+
+nav ul{
+list-style-type: none;
+
+}
+nav li{
+display: inline;
+margin-right: 40px;
+background-color: #FFCE1D;
+padding-right: 35px;
+padding-left: 35px;
+padding-top: 3px;
+padding-bottom: 3px;
+border: #c0c0c0 3px outset;
+border-radius: 5px;
+font-weight: bold;
+cursor: default;
+}
+nav{
+
+margin-top: 20px;
+text-align: center;
+margin-bottom: 30px;
+
+}
+
+nav a{
+	text-decoration: none;
+	color: white;
+	text-shadow: gray 0px 0px 4px;
+	
+}	
+
+nav li:hover {
+border: #c0c0c0 3px inset;
+}
+
+nav a:hover {
+color: #808080;
+text-shadow: none;
+
+}
+
+section{
+	width: 575px;
+	float: left;
+}
+
+article{
+	border: gray 4px groove;
+	padding: 20px;
+	text-align: left;
+	margin-bottom: 25px;
+	margin-right: 30px;
+}
+
+article h2{
+	font-size: 14pt;
+	color: white;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+article p{
+	font-size: 12pt;
+	padding-bottom: 10px;
+	color: white;
+}
+
+article blockquote{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 10pt;
+	padding: 15px;
+	background-color: #FFDB4B;
+	border-radius: 10px;
+	color: black;
+}
+
+
+video{
+	width: 320px;
+	height: 180px;
+	
+	border: gray 1px solid;
+	border-radius: 5px;
+	background-color: #ffceld;
+}
+
+aside {
+    text-align: center;
+    padding-right: 10px;
+    width: 155px;
+    float: right;
+    color: white;
+    padding: 35px;
+    background-color: #222222;
+    border-radius: 15px;
+}
+
+aside h3 {
+    font-size: 16pt;
+    padding-bottom: 10px;
+    font-variant: small-caps;
+    padding-top: 25px;
+}
+
+aside p {
+    font-size: 12pt;
+    font-style: italic;
+    font-weight: bold;
+    color: #E1E1E1;
+}
+
+aside img {
+    width: 100px;
+    height: 100px;
+    border: none;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 5px;
+    background-color: #ffce1d;
+    color: black;
+    border-radius: 10px;
+}
+
+footer p {
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: gray 1px 1px 2px;
+}
+
+
+
+
+
