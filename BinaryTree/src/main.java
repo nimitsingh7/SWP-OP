@@ -8,6 +8,6 @@ public class main {
 		bt.add(1);
 		bt.add(7);
 		
-		bt.containsNode(6);
+		bt.containsNode(1);
 	}
 }

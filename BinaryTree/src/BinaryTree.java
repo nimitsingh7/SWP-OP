@@ -29,24 +29,25 @@ public class BinaryTree {
 		root = head(root, value);
 	}
 	
-	private boolean containsNodeRecursive(Node current, int value) {
+	private boolean containsNodeR(Node current, int value) {
 	    if (current == null) {
-	        return false;
-	    } 
+	    	System.out.println("Zahl ist im Baum nicht vorhanden!");
+	    	return false;
+	    }
 	    if (value == current.value) {
 	        System.out.printf("Zahl: %d", current.value);
 	    	return true;
 	    } 
 	    return value < current.value
-	      ? containsNodeRecursive(current.left, value)
-	      : containsNodeRecursive(current.right, value);
+	      ? containsNodeR(current.left, value)
+	      : containsNodeR(current.right, value);
 	}
 	
 	public boolean containsNode(int value) {
-	    return containsNodeRecursive(root, value);
+	    return containsNodeR(root, value);
 	}
 	
-	public void givenABinaryTree_WhenAddingElements_ThenTreeContainsThoseElements() {
+	public void givenBinaryTree() {
 	    BinaryTree bt = createBinaryTree();
 	 
 	    assertTrue(bt.containsNode(6));
