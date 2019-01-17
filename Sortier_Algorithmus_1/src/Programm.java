@@ -8,6 +8,7 @@ public class Programm {
 	long time = System.currentTimeMillis();
 	
 	ArrayList<Integer> list = new ArrayList<Integer>();
+	
 	for(int i = 0;i < 100;i++)
 	{
 		list.add((int)((Math.random() *9)+1));
