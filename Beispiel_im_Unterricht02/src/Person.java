@@ -1,5 +1,5 @@
 
-public class Person {
+public class Person{
 	private String name;
 	private String firstname;
 	int age;
@@ -32,6 +32,7 @@ public class Person {
 	
 	public boolean isBiggerthan(Person p)
 	{
+		
 		int slength;
 		
 		if(this.name.length() < p.getName().length())
