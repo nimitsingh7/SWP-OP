@@ -4,12 +4,12 @@
 package matrix;
 
 public class Matrix {
-	public int[][] mat;
+	public int[][] data;
 	int r;
 	int c;
 
 	public Matrix(int r, int c) {
-		mat = new int[r][c];
+		data = new int[r][c];
 		this.r = r;
 		this.c = c;
 	}
@@ -18,29 +18,40 @@ public class Matrix {
 		Matrix copy = new Matrix(this.r, this.c);
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
-				copy.mat[i][j] = this.mat[i][j];
+				copy.data[i][j] = this.data[i][j];
 			}
 		}
 		return copy;
 	}
 
-	public void skalarMult(int s) throws FalscheMatrix{
+	public void SigmoidFunktion() throws FalscheMatrix
+	{
+			for(int i = 0; i<r; i++)
+			{
+				for(int j = 0; j<c; i++)
+				{
+					data[i][j] =  (int) (1/(Math.exp(-data[i][j])+1));
+				}
+			}
+	}
+	
+	public static Matrix skalarMult(int s, Matrix m) throws FalscheMatrix {
+		Matrix copy = m.copy();
+		copy.skalarMultiplikatoin(s);
+		return copy;
+	}
+	
+	public void skalarMultiplikatoin(int s) throws FalscheMatrix{
 		try {
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
-				mat[i][j] *= s;
+				data[i][j] *= s;
 			}
 		}
 		}
 		catch(ArrayIndexOutOfBoundsException e) {
 			throw new FalscheMatrix();
 		}
-	}
-
-	public static Matrix skalarMult(int s, Matrix m) throws FalscheMatrix {
-		Matrix copy = m.copy();
-		copy.skalarMult(s);
-		return copy;
 	}
 
 	public static int[] vertMult(int[] v, Matrix m) throws falscheÜbereinstimmmungderLaenge, FalscheMatrix {
@@ -52,7 +63,7 @@ public class Matrix {
 		for (int i = 0; i < m.r; i++) {
 			int zw = 0;
 			for (int j = 0; j < m.c; j++) {
-				zw += m.mat[i][j] * v[j];
+				zw += m.data[i][j] * v[j];
 			}
 			nv[i] = zw;
 		}
@@ -63,7 +74,7 @@ public class Matrix {
 		return nv;
 	}
 
-	public static int[] horizonMult(int[] v, Matrix m) throws falscheÜbereinstimmmungderLaenge, FalscheMatrix {
+	public static int[] horizonMultiplikation(int[] v, Matrix m) throws falscheÜbereinstimmmungderLaenge, FalscheMatrix {
 		int[] nv=new int[v.length];
 		if(v.length!=m.r) {
 			throw new falscheÜbereinstimmmungderLaenge();
@@ -72,7 +83,7 @@ public class Matrix {
 		for(int i=0;i<m.c;i++) {
 			int zw=0;
 			for(int j=0;j<m.r;j++) {
-				zw+=m.mat[j][i]*v[j];
+				zw+=m.data[j][i]*v[j];
 			}
 			nv[i]=zw;
 		}
@@ -82,13 +93,29 @@ public class Matrix {
 		}
 		return nv;
 	}
-	public static Matrix matMult(Matrix m, Matrix n){
+	public static Matrix MatrixMultiplikation(Matrix m, Matrix n){
 		Matrix e= new Matrix(m.r,m.c);
 		for(int i=0;i<m.r;i++){
 			for(int j=0;j<m.c;j++){
-				e.mat[i][j]=m.mat[i][j]*n.mat[i][j];
+				e.data[i][j]=m.data[i][j]*n.data[i][j];
 			}
 		}
 		return e;
 	}
+	
+	public boolean equals(Matrix b)
+	{
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				if(this.data[i][j] != b.data[i][j])
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	
 }
